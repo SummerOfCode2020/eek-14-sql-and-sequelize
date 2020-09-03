@@ -25,19 +25,20 @@ const { sequelize } = require('./sequelize/sequelize-common');
      */
 
     // <https://dev.mysql.com/doc/refman/8.0/en/create-table.html>
-    await sequelize.query(`
-        CREATE TABLE
-        -- 'IF NOT EXISTS' is new tonight. 
-        -- Prevents an error from occurring if the table exists.
-        -- See dev.mysql.com link above for detail
-        IF NOT EXISTS thu_demo_user_njl (
-            id INT NOT NULL AUTO_INCREMENT,
-            username VARCHAR(45) NOT NULL UNIQUE,
-            password VARCHAR(45) NOT NULL,
-            date_created DATETIME NULL,
-            PRIMARY KEY (id)
-        )
-    `);
+    /* await sequelize.query(`
+         CREATE TABLE
+         -- 'IF NOT EXISTS' is new tonight. 
+         -- Prevents an error from occurring if the table exists.
+         -- See dev.mysql.com link above for detail
+         IF NOT EXISTS thu_demo_user_njl (
+             id INT NOT NULL AUTO_INCREMENT,
+             username VARCHAR(45) NOT NULL UNIQUE,
+             password VARCHAR(45) NOT NULL,
+             date_created DATETIME NULL,
+             PRIMARY KEY (id)
+         )
+     `);
+ */
 
     /*
         to provide feedback on the sql above we get all tables
