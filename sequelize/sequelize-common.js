@@ -27,19 +27,19 @@ const { mysqlUrl } = require('./not-for-git-settings')
 
  */
 
- /**
+/**
  
-    * For `dialectOptions`
+   * For `dialectOptions`
 
-    - see <https://sequelize.org/master/manual/dialect-specific-things.html>
+   - see <https://sequelize.org/master/manual/dialect-specific-things.html>
  
 
-    `multipleStatements` and other options can be found here:
+   `multipleStatements` and other options can be found here:
 
-    - <https://github.com/sidorares/node-mysql2/blob/master/lib/connection_config.js>
-    - <https://github.com/mysqljs/mysql>
+   - <https://github.com/sidorares/node-mysql2/blob/master/lib/connection_config.js>
+   - <https://github.com/mysqljs/mysql>
 
-  */
+ */
 
 const sequelize = new Sequelize(mysqlUrl, {
     logging: console.log,

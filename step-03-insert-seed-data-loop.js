@@ -3,7 +3,7 @@ const { sequelize } = require('./sequelize/sequelize-common');
 /**
     Two key functions are store in a utils file to keep this file focused
  */
-const { getRandomValue, getTestUserInsertStatements } = require('./utils')
+const { getRandomValue, getTestUserInsertStatements } = require('./utils');
 
 /**
 
@@ -33,12 +33,12 @@ const { getRandomValue, getTestUserInsertStatements } = require('./utils')
     */
     const [results] = await sequelize.query(`
         SELECT username, date_created
-        FROM thu_demo_user
+        FROM thu_demo_user_njl
     `);
 
     // show the SQL results in the console
-    console.log({results});
+    console.log({ results });
 
 })().catch(error => {
-    console.log({error});
-});;
+    console.log({ error });
+});
