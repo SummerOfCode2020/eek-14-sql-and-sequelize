@@ -1,9 +1,9 @@
 /**
     https://sequelize.org/master/manual/model-querying-basics.html
  */
- const { sequelize } = require('./sequelize/sequelize-common');
- const { Sequelize, DataTypes } = require('sequelize');
- const UserModel = require('./models/thuDemoUser')(sequelize, DataTypes);
+const { sequelize } = require('./sequelize/sequelize-common');
+const { Sequelize, DataTypes } = require('sequelize');
+const UserModel = require('./models/thuDemoUserNjl')(sequelize, DataTypes);
 
 //console.log({UserModel})
 
@@ -15,15 +15,15 @@
     console.log({ count })
     console.log({ rows })
 
-    for(let rowNum = 0; rowNum < rows.length; rowNum++) {
+    for (let rowNum = 0; rowNum < rows.length; rowNum++) {
         let row = rows[rowNum];
         let columnData = row.dataValues;
         console.log({ columnData })
-        
+
         let { username, password } = columnData;
         console.log({ username, password });
     }
 
 })().catch(error => {
-    console.log({error});
+    console.log({ error });
 });
