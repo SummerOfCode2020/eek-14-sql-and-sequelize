@@ -8,7 +8,7 @@ const { sequelize } = require('./sequelize/sequelize-common');
         See <https://dev.mysql.com/doc/refman/5.6/en/insert.html>
      */
     await sequelize.query(`  
-        INSERT INTO thu_demo_user
+        INSERT INTO thu_demo_user_jar
         (
             username,
             password,
@@ -16,7 +16,7 @@ const { sequelize } = require('./sequelize/sequelize-common');
         )
         VALUES
         (
-            'testuser1001',
+            'testuser234324',
             'test1001',
             now()
         );
@@ -31,7 +31,7 @@ const { sequelize } = require('./sequelize/sequelize-common');
     */
     const [results] = await sequelize.query(`
         SELECT *
-        FROM thu_demo_user
+        FROM thu_demo_user_jar
     `);
 
     console.log({results});

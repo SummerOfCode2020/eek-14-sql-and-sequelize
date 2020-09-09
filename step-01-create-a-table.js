@@ -30,7 +30,7 @@ const { sequelize } = require('./sequelize/sequelize-common');
         -- 'IF NOT EXISTS' is new tonight. 
         -- Prevents an error from occurring if the table exists.
         -- See dev.mysql.com link above for detail
-        IF NOT EXISTS thu_demo_user (
+        IF NOT EXISTS thu_demo_user_jar (
             id INT NOT NULL AUTO_INCREMENT,
             username VARCHAR(45) NOT NULL UNIQUE,
             password VARCHAR(45) NOT NULL,
