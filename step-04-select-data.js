@@ -6,7 +6,7 @@ const { sequelize } = require('./sequelize/sequelize-common');
 
     const [results] = await sequelize.query(`
         SELECT *
-        FROM thu_demo_user
+        FROM thu_demo_user_jar
         LIMIT 1
     `);
 
